@@ -1,0 +1,50 @@
+<?php
+mysql_connect('120.108.111.157','103021051','53wcpq');//連結伺服器
+mysql_select_db('103021051');//選擇資料庫
+mysql_query('set names utf8');//以utf8讀取資料，讓資料可以讀取中文
+$data=mysql_query('select * from APP');//從contact資料庫中選擇所有的資料表
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#000000">
+    <table>
+        
+        
+        
+        <tr>
+       <img  style="width:70;" src="http://i.imgur.com/yPJts4A.jpg"   is="image" ><br>
+       <a href="t2.html"><font color="#FFBF00"><h2>回2016秋季頁</h2></font></a>
+    </tr>    
+        
+        
+        
+        
+    <tr>
+        <td><img style="width:45%;" src="http://i.imgur.com/KtKwLvK.png" is="image"></td>
+    </tr>
+    <?php
+for($i=1;$i<=mysql_num_rows($data);$i++){
+$rs=mysql_fetch_row($data);
+?>
+    <tr>
+        <td><h3><font color="white"><br>　　風香與凜音兩人從小在孤兒院一起長大，既是青梅竹馬又有著如同姐妹般的關係，即使生活貧困依然嚮往著光明的未來。長大後，風香先離開孤兒院，一個人租屋、努力打工過生活─這是她們的第一次離別。<br>　　風香在外謀生，性格變得比較陽剛，但她的心中仍然惦記著嬌小的凜音，並希望未來有一天能夠重逢。可惜事與願違，造訪了風香與凜音的「二次離別」，改變了兩人的命運。</font></h3></td><br>
+        
+        
+    </tr>
+    </table>
+    
+    
+    <br>
+    <iframe width="90%" height="60%" src="https://www.youtube.com/embed/Yq5ILlY1UGQ" frameborder="0" allowfullscreen></iframe>
+    
+    
+         <br>
+     <a href=" http://www.eyny.com/video.php?mod=search&type=video&srchtxt=Vivid%20Strike!&page=6">
+         <font color="#FFBF00"><h2>全話影片連結</h2></font></a>
+    
+    
+    
+</body>
+</html>
